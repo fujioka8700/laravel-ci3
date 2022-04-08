@@ -13,4 +13,16 @@ const mix = require('laravel-mix');
 
 mix.js('resources/js/app.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css')
-    .version();
+    .version()
+    .browserSync({
+        proxy: {
+            target: 'http://localhost',
+        },
+        files: [
+            './resources/**/*',
+            './public/**/*',
+        ],
+        open: false,
+        notify: false,
+        reloadOnRestart: true,
+    });
