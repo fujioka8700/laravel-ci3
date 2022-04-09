@@ -22,7 +22,7 @@ class ArticleControllerTest extends TestCase
     {
         $response = $this->get(route('articles.create'));
 
-        $response->assertRedirect(route('login'));
+        $response->assertStatus(302)->assertRedirect(route('login'));
     }
 
     public function testAuthCreate()
