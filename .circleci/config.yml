@@ -7,7 +7,6 @@ jobs:
         environment:
           MYSQL_DATABASE: circle_test
           MYSQL_USER: root
-          MYSQL_ROOT_PASSWORD: rootpass
           MYSQL_PASSWORD: rootpass
     environment:
       APP_ENV: testing
