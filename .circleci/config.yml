@@ -8,6 +8,8 @@ jobs:
           MYSQL_DATABASE: larasns
           MYSQL_USER: default
           MYSQL_PASSWORD: secret
+          MYSQL_ALLOW_EMPTY_PASSWORD: false
+          MYSQL_HOST: 127.0.0.1
     environment:
       APP_ENV: testing
       DB_CONNECTION: mysql
