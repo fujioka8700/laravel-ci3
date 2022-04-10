@@ -33,6 +33,7 @@ jobs:
           name: get ready for mysql
           command: |
             sudo apt-get update
+            sudo install -y mariadb-client
             sudo docker-php-ext-install pdo_mysql
             dockerize -wait tcp://127.0.0.1:3306 -timeout 1m
       - run:
