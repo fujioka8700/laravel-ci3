@@ -5,9 +5,9 @@ jobs:
       - image: circleci/php:7.4-node-browsers
       - image: circleci/mariadb:10.3
         environment:
-          MYSQL_DATABASE: larasns
-          MYSQL_USER: default
-          MYSQL_PASSWORD: secret
+          - MYSQL_DATABASE: larasns
+          - MYSQL_USER: default
+          - MYSQL_PASSWORD: secret
     environment:
       APP_ENV: testing
       DB_CONNECTION: mysql
