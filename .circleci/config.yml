@@ -17,6 +17,7 @@ jobs:
       DB_DATABASE: larasns
       DB_USERNAME: default
       DB_PASSWORD: secret
+    working_directory: ~/ci-demo
     steps:
       - checkout
       - run: sudo composer self-update --1
