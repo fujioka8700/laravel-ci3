@@ -3,7 +3,7 @@ jobs:
   build:
     docker:
       - image: circleci/php:7.4-node-browsers
-      - image: circleci/mariadb:10.4
+      - image: circleci/mariadb:10.3
         environment:
           MYSQL_DATABASE: larasns
           MYSQL_USER: default
@@ -43,6 +43,7 @@ jobs:
           name: get ready for mariadb
           command: |
             sudo apt-get update
+            sudo apt-get install -y mariadb-client
             sudo docker-php-ext-install pdo_mysql
             dockerize -wait tcp://127.0.0.1:3306 -timeout 1m
       - run:
