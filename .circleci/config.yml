@@ -3,7 +3,7 @@ jobs:
   build:
     docker:
       - image: circleci/php:7.4-node-browsers
-      - image: circleci/circleci/mariadb:10.3
+      - image: circleci/circleci/mariadb:10.3.34
         environment:
           MYSQL_DATABASE: larasns
           MYSQL_USER: default
