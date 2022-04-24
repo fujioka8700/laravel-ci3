@@ -1,0 +1,16 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /var/www/html/laravel.haniwa.site
+
+permissions:
+  - object: /var/www/html/laravel.haniwa.site
+    owner: ec2-user
+    group: apache
+
+hooks:
+  AfterInstall:
+    - location: ./scripts/after_install.sh
+      timeout: 60
+      runas: ec2-user
